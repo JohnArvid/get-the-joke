@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   const [joke, setJoke] = useState('Get joke by pressing button')
   /* Replace url with actual url to fetch joke from https://v2.jokeapi.dev/ */
-  const apiUrl = 'https://api.example.com/jokes/random';
+  const apiUrl = 'https://v2.jokeapi.dev/joke/Any';
 
 
   const getJokeFromAPI = () => {
@@ -25,7 +25,8 @@ function App() {
         // Handle the data
         console.log(data);
         // Display the joke on the webpage or in the console
-        const joke = data.joke;
+        const joke = data.joke||data.setup + '\n' + data.delivery;
+        console.log(joke)
         setJoke(joke);
       })
       .catch(error => {
