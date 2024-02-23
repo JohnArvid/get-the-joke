@@ -5,9 +5,33 @@ import './App.css'
 
 
 function App() {
-  const [joke, setJoke] = useState(0)
+  const [joke, setJoke] = useState('Get joke by pressing button')
+  /* Replace url with actual url to fetch joke from https://v2.jokeapi.dev/ */
+  const apiUrl = 'https://api.example.com/jokes/random';
+
+
   const getJokeFromAPI = () => {
-  //  .then(setJoke(??))
+      // Make the API call using fetch
+    fetch(apiUrl)
+      .then(response => {
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error('Failed to fetch joke');
+        }
+        // Parse the JSON response
+        return response.json();
+      })
+      .then(data => {
+        // Handle the data
+        console.log(data);
+        // Display the joke on the webpage or in the console
+        const joke = data.joke;
+        setJoke(joke);
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error('Error fetching joke:', error);
+      })
   }
 
   return (
