@@ -1,12 +1,9 @@
+import './get-joke-button.styles.css'
 
-const getJoke = () => {
-  
-}
-
-const GetJokeButton = props => {
+const GetJokeButton = ({getJoke}) => {
   return (
     <div className="get-joke-button" onClick={getJoke}>
-      <h1>Get joke</h1>
+      <button type='button'>Get joke</button>
     </div>
   )
 }

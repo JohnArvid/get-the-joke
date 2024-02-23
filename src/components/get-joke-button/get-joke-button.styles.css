@@ -1,0 +1,5 @@
+.get-joke-button button {
+    color: black;
+    background-color: rgb(163, 187, 187);
+    border-radius: 0.5em;
+}
