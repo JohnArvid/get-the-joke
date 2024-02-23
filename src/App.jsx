@@ -38,7 +38,7 @@ function App() {
     <>
       <h1>Get the joke</h1>
       <JokeDisplay joke = {joke}/>
-      <GetJokeButton getJoke = {getJokeFromAPI}/>
+      <GetJokeButton clickHandler = {getJokeFromAPI}/>
     </>
   )
 }
