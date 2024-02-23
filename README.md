@@ -1,7 +1,7 @@
 ### Get the joke
 
 **Description:**
-A simple web app that fetches and displays random jokes from a joke API.
+A simple web app that fetches and displays random jokes from a JokeAPI.
 
 **Features:**
 
@@ -17,7 +17,7 @@ A simple web app that fetches and displays random jokes from a joke API.
   - React + Vite.
 
 - **API:**
-  - Use a Joke API (for example, the JokeAPI: https://v2.jokeapi.dev/).
+  - Use a remote API (https://v2.jokeapi.dev/).
 
 **Learning Outcomes:**
 - Setting up a react project with Vite.
